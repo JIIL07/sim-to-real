@@ -1,0 +1,33 @@
+[1.302s] Invoking command in '/home/akhmad/ros2_ws/src/my_first_pkg': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/akhmad/ros2_ws/build/my_first_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/akhmad/ros2_ws/install/my_first_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_first_pkg build --build-base /home/akhmad/ros2_ws/build/my_first_pkg/build install --record /home/akhmad/ros2_ws/build/my_first_pkg/install.log --single-version-externally-managed install_data
+[1.821s] running egg_info
+[1.878s] writing ../../build/my_first_pkg/my_first_pkg.egg-info/PKG-INFO
+[1.879s] writing dependency_links to ../../build/my_first_pkg/my_first_pkg.egg-info/dependency_links.txt
+[1.879s] writing entry points to ../../build/my_first_pkg/my_first_pkg.egg-info/entry_points.txt
+[1.879s] writing requirements to ../../build/my_first_pkg/my_first_pkg.egg-info/requires.txt
+[1.879s] writing top-level names to ../../build/my_first_pkg/my_first_pkg.egg-info/top_level.txt
+[1.972s] reading manifest file '../../build/my_first_pkg/my_first_pkg.egg-info/SOURCES.txt'
+[1.974s] writing manifest file '../../build/my_first_pkg/my_first_pkg.egg-info/SOURCES.txt'
+[1.975s] running build
+[1.976s] running build_py
+[1.976s] copying my_first_pkg/__init__.py -> /home/akhmad/ros2_ws/build/my_first_pkg/build/lib/my_first_pkg
+[1.976s] copying my_first_pkg/subscriber.py -> /home/akhmad/ros2_ws/build/my_first_pkg/build/lib/my_first_pkg
+[1.976s] copying my_first_pkg/publisher.py -> /home/akhmad/ros2_ws/build/my_first_pkg/build/lib/my_first_pkg
+[1.978s] running install
+[1.989s] running install_lib
+[2.016s] copying /home/akhmad/ros2_ws/build/my_first_pkg/build/lib/my_first_pkg/__init__.py -> /home/akhmad/ros2_ws/install/my_first_pkg/lib/python3.12/site-packages/my_first_pkg
+[2.017s] copying /home/akhmad/ros2_ws/build/my_first_pkg/build/lib/my_first_pkg/subscriber.py -> /home/akhmad/ros2_ws/install/my_first_pkg/lib/python3.12/site-packages/my_first_pkg
+[2.017s] copying /home/akhmad/ros2_ws/build/my_first_pkg/build/lib/my_first_pkg/publisher.py -> /home/akhmad/ros2_ws/install/my_first_pkg/lib/python3.12/site-packages/my_first_pkg
+[2.017s] byte-compiling /home/akhmad/ros2_ws/install/my_first_pkg/lib/python3.12/site-packages/my_first_pkg/__init__.py to __init__.cpython-312.pyc
+[2.018s] byte-compiling /home/akhmad/ros2_ws/install/my_first_pkg/lib/python3.12/site-packages/my_first_pkg/subscriber.py to subscriber.cpython-312.pyc
+[2.019s] byte-compiling /home/akhmad/ros2_ws/install/my_first_pkg/lib/python3.12/site-packages/my_first_pkg/publisher.py to publisher.cpython-312.pyc
+[2.019s] running install_data
+[2.019s] copying resource/my_first_pkg -> /home/akhmad/ros2_ws/install/my_first_pkg/share/ament_index/resource_index/packages
+[2.020s] copying package.xml -> /home/akhmad/ros2_ws/install/my_first_pkg/share/my_first_pkg
+[2.020s] running install_egg_info
+[2.049s] removing '/home/akhmad/ros2_ws/install/my_first_pkg/lib/python3.12/site-packages/my_first_pkg-0.0.0-py3.12.egg-info' (and everything under it)
+[2.049s] Copying ../../build/my_first_pkg/my_first_pkg.egg-info to /home/akhmad/ros2_ws/install/my_first_pkg/lib/python3.12/site-packages/my_first_pkg-0.0.0-py3.12.egg-info
+[2.050s] running install_scripts
+[2.247s] Installing publisher script to /home/akhmad/ros2_ws/install/my_first_pkg/lib/my_first_pkg
+[2.247s] Installing subscriber script to /home/akhmad/ros2_ws/install/my_first_pkg/lib/my_first_pkg
+[2.247s] writing list of installed files to '/home/akhmad/ros2_ws/build/my_first_pkg/install.log'
+[2.270s] Invoked command in '/home/akhmad/ros2_ws/src/my_first_pkg' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/akhmad/ros2_ws/build/my_first_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/akhmad/ros2_ws/install/my_first_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_first_pkg build --build-base /home/akhmad/ros2_ws/build/my_first_pkg/build install --record /home/akhmad/ros2_ws/build/my_first_pkg/install.log --single-version-externally-managed install_data
