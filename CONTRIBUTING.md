@@ -12,6 +12,7 @@ Thank you for contributing! This repository hosts the full pipeline for autonomo
 - [Development workflow](#development-workflow)
 - [Issues](#issues)
 - [Pull requests](#pull-requests)
+- [CI/CD](#cicd)
 - [Code style](#code-style)
 - [Documentation](#documentation)
 - [Simulation and sim-to-real](#simulation-and-sim-to-real)
@@ -205,6 +206,7 @@ In the PR description use `Closes #<number>` or `Related to #<number>`.
 - [ ] New parameters and launch files are documented
 - [ ] No build artifacts committed (`build/`, `install/`, `log/`, binary logs)
 - [ ] Issue created or referenced
+- [ ] GitHub Actions CI passes (`Build and test`)
 
 ### PR description template
 
@@ -237,6 +239,43 @@ Closes #...
 - At least **1 approval** before merge (urgent hotfixes — team agreement).
 - Address review comments or reply in the thread.
 - Delete the branch on GitHub after merge.
+
+---
+
+## CI/CD
+
+Every push to `main` and every pull request runs the [**CI** workflow](.github/workflows/ci.yml) on Ubuntu 24.04 with ROS 2 Jazzy:
+
+1. `rosdep install` — resolve package dependencies
+2. `colcon build --symlink-install` — build the workspace
+3. `colcon test` — run package tests (lint: flake8, pep257, etc.)
+
+Run the same checks locally before opening a PR:
+
+```bash
+source /opt/ros/jazzy/setup.bash
+rosdep install --from-paths src --ignore-src -r -y
+colcon build --symlink-install
+source install/setup.bash
+colcon test
+colcon test-result --verbose
+```
+
+### Branch protection (`main`)
+
+Direct pushes to `main` are **not allowed**. All changes go through a PR with:
+
+- at least **1 approving review**;
+- passing CI status check **Build and test**.
+
+Repository admins: enable protection once after the CI workflow has run on `main` at least once.
+
+1. Repository → **Settings** → **Branches** → **Add branch ruleset** (or *Add classic branch protection rule*).
+2. Target branch: `main`.
+3. Enable **Require a pull request before merging** (1 approval).
+4. Enable **Require status checks to pass** → select **Build and test**.
+5. Enable **Require conversation resolution before merging** (recommended).
+6. Save.
 
 ---
 
@@ -373,8 +412,10 @@ Report as a sim vs real table plus a short conclusion in the PR or under `docs/e
 
 ```
 .
+├── README.md
 ├── CONTRIBUTING.md
 ├── .gitignore
+├── .github/workflows/ci.yml
 └── src/                    # ROS 2 packages
     └── ...
 ```
