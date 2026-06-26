@@ -1,7 +1,8 @@
 ##IMU Data Logger
 
-Скрипт для считывания данных с IMU-датчика WitMotion и записи их в CSV-файл в формате timestamp, accel_x/accel_y/accel_z, gyro_x/gyro_y/gyro_z, roll, pitch, yaw.
-
+Скрипт для считывания данных с IMU-датчика WitMotion и публикации их в шину ros2/imu/raw_data
+**Топик** '/imu/data_raw'
+**Тип Собщения** 'sensor_msgs/msg/Imu'
 #Установка:
 
 Создать виртуальное окружение: python3 -m venv myenv
@@ -9,4 +10,8 @@
 Установить зависимости: pip install -r requirements.txt
 
 #Запуск
-`python3 imu_logger.py
+1) launch IMU.py in terminal;
+2) in the second terminal:
+source /opt/ros/jazzy/setup.bash
+ros2 topic echo /imu/data_raw
+
